@@ -8,8 +8,8 @@ defmodule Sequence2.Application do
   @impl true
   def start(_type, _args) do
     children = [
-
-      { Sequence.Server, 123},
+      { Sequence.Stash, 123},
+      { Sequence.Server, nil},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
