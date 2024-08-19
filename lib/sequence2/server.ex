@@ -12,8 +12,10 @@ defmodule Sequence.Server do
       GenServer.cast(__MODULE__, {:increment_number, delta})
     end
 
+
     def next_number do
-      GenServer.call(__MODULE__, :next_number)
+      with number = GenServer.call(__MODULE__, :next_number),
+      do: "The next number is #{number}"
     end
 
     # Server Callbacks
