@@ -6,15 +6,15 @@ defmodule Sequence2.Application do
   use Application
 
   @impl true
-  def start(_type, _args) do
+  def start(_type, initial_number) do
     children = [
-      { Sequence.Stash, 123},
+      { Sequence.Stash, initial_number},
       { Sequence.Server, nil},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Sequence2.Supervisor]
+    opts = [strategy: :rest_for_one, name: Sequence2.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end
