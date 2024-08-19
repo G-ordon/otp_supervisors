@@ -1,5 +1,7 @@
 defmodule Sequence.Server do
   use GenServer
+
+  @vsn "0"
     # Client API
 
     def start_link(_) do
