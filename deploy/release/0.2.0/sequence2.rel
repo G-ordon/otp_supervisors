@@ -1,0 +1,11 @@
+%% coding: utf-8
+{release,{"sequence2","0.2.0"},
+         {erts,"15.0"},
+         [{kernel,"10.0",permanent},
+          {stdlib,"6.0",permanent},
+          {elixir,"1.16.3",permanent},
+          {sasl,"4.2.2",permanent},
+          {sequence2,"0.2.0",permanent},
+          {iex,"1.16.3",none},
+          {compiler,"8.5",permanent},
+          {logger,"1.16.3",permanent}]}.
